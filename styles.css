@@ -1,0 +1,99 @@
+body {
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Quicksand", sans-serif;
+}
+.register-wrapper {
+  background-color: white;
+  width: 40%;
+}
+
+.top h2 {
+  text-align: center;
+  margin: 2rem 1rem;
+  color: blue;
+  font-weight: 600;
+}
+.input-wrapper {
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  width: 90%;
+  padding: 5px 2px 2px;
+  border: none;
+  border-bottom: 2px solid blue;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 1rem;
+}
+
+p span {
+  color: blue;
+  font-weight: 500;
+}
+
+p {
+  font-size: 14px;
+}
+
+button {
+  width: 200px;
+  height: 40px;
+  margin-right: 1rem;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: rgb(39, 39, 238);
+  color: white;
+}
+
+.bottom {
+  background-color: rgb(33, 33, 214);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-wrapper p {
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottom-wrapper ul {
+  list-style: none;
+  display: flex;
+}
+
+.bottom-wrapper ul li {
+  font-size: 35px;
+  margin-right: 4rem;
+}
+
+li:last-child {
+  margin-right: 0;
+}
