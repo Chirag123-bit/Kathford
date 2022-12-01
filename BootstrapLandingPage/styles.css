@@ -1,8 +1,36 @@
 .carousel-item {
-  height: 100vh;
+  height: 95vh;
   min-height: 300px;
 }
 
 .section-padding {
-  padding: 3rem;
+  padding: 6rem 3rem;
 }
+
+/* #about {
+  height: 50vh;
+}
+
+.img-container {
+  height: 50%;
+} */
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+#about-p {
+  text-align: justify;
+  font-weight: 500;
+  color: black;
+  font-size: 1rem;
+}
+
+#about-banner {
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+}
+/* .text-center {
+  text-align: center;
+} */
