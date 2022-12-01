@@ -1,10 +1,15 @@
 .carousel-item {
   height: 95vh;
-  min-height: 300px;
+  min-height: 300px !important;
 }
 
 .section-padding {
   padding: 6rem 3rem;
+}
+
+.card {
+  margin-bottom: 2rem;
+  align-items: center;
 }
 
 /* #about {
@@ -34,3 +39,39 @@
 /* .text-center {
   text-align: center;
 } */
+
+@media (max-width: 1200px) {
+  .carousel-item {
+    height: auto;
+  }
+}
+@media (max-width: 1000px) {
+  .card-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card {
+    width: 35rem !important;
+  }
+
+  .section-padding {
+    padding: 4rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 25rem !important;
+  }
+
+  .carousel-item img {
+    min-height: 40vh;
+  }
+}
+
+@media (max-width: 360px) {
+  .card {
+    width: 18rem !important;
+  }
+}
+ 
