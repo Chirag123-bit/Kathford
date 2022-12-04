@@ -3,7 +3,6 @@
 3) Create a length converter function
 4) Calculate the sum of numbers within an array
 5) Create a function that reverses an array
-6) Sort an array from lowest to highest
 7) Remove the spaces found in a string
 8) Return the number of vowels in a string
 9) WAP to create a number guessing game
