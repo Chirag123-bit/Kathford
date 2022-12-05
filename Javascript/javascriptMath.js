@@ -73,12 +73,55 @@ function passwordGenerator(length) {
   let password = "";
   let arr = new Uint32Array(passwordLength);
   window.crypto.getRandomValues(arr);
-//   console.log(arr);
+  //   console.log(arr);
 
-    for (let i = 0; i < passwordLength; i++) {
-      password += chars[arr[i] % chars.length];
-    }
+  for (let i = 0; i < passwordLength; i++) {
+    password += chars[arr[i] % chars.length];
+  }
   return password;
 }
 
 console.log(passwordGenerator(10));
+
+function sumOfArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+
+// let sum = sumOfArray([1, 2, 3]);
+// console.log(sum);
+
+// console.log("Hello World".replace(" ",""))
+
+function removeSpace(str) {
+  let newString = "";
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] != " ") {
+      newString += str[i];
+    }
+  }
+  console.log(newString);
+  return newString;
+}
+
+// removeSpace("Hello World Again");
+
+function countVowels(str) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (
+      str[i] == "a" ||
+      str[i] == "e" ||
+      str[i] == "i" ||
+      str[i] == "o" ||
+      str[i] == "u"
+    ) {
+      count += 1;
+    }
+  }
+  console.log(count);
+}
+countVowels("Aeiou");

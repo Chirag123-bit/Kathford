@@ -2,8 +2,18 @@
 2) Print a table containing multiplication tables
 3) Create a length converter function
 4) Calculate the sum of numbers within an array
+ [1,2,3] => 6
+
 5) Create a function that reverses an array
-7) Remove the spaces found in a string
+
+7) Remove the spaces found in a string (Hello World) => HelloWorld
+
+
 8) Return the number of vowels in a string
+
+Apple => 2
+
+
+
 9) WAP to create a number guessing game
 10) Random Password generator (0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ)
