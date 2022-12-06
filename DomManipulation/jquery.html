@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        .error {
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex flex-column w-100 justify-content-center align-items-center" style="height: 100vh;">
+        <div class="d-flex align-items-center mb-5">
+            <label style="margin-right: 2rem;">Enter Your Password</label>
+            <input type="password" id="password" />
+        </div>
+        <div id="password-conditions" class="border border-1 border-warning p-4 error">
+            <p id="char">At least one character </p>
+            <p id="capital">At least one uppercase letter</p>
+            <p id="number">At least one number</p>
+            <p id="length">At least eight letters in length</p>
+        </div>
+    </div>
+</body>
+<script src="./jquery-3.6.1.min.js"></script>
+<script>
+    $("#password-conditions").hide()
+
+    $("#password").focus(function () {
+        $("#password-conditions").show()
+    })
+
+
+    $("#password").keyup(function () {
+        let enteredPassword = $(this).val();
+        if (enteredPassword.length >= 1) {
+            $("#char").addClass("success")
+        }
+        else {
+            $("#char").removeClass("success")
+        }
+
+        if (enteredPassword.match(/[A-Z]/)) {
+            $("#capital").addClass("success")
+        }
+        else {
+            $("#capital").removeClass("success")
+        }
+
+        if (enteredPassword.match(/\d/)) {
+            $("#number").addClass("success")
+        }
+        else {
+            $("#number").removeClass("success")
+        }
+
+        if (enteredPassword.length >= 8) {
+            $("#length").addClass("success")
+        }
+        else {
+            $("#length").removeClass("success")
+        }
+
+
+
+    })
+</script>
+
+</html>

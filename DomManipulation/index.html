@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+</head>
+
+<body>
+    <h1 id="first">Heading One</h1>
+    <h1 id="second">Heading Two</h1>
+    <h1 id="third">Heading Three</h1>
+    <h1 id="fourth">Heading Four</h1>
+
+    <div id="parent">
+
+    </div>
+
+</body>
+<script>
+    // let var1 = document.getElementById("fourth")
+    // console.log(var1.innerHTML)
+    document.getElementById("fourth").style.color = "red"
+    document.getElementById('third').style.fontSize = "40px";
+    let imgTag = document.createElement("img")
+    imgTag.src = "https://p4.wallpaperbetter.com/wallpaper/21/350/403/desktop-background-picture-nature-1920x1080-wallpaper-preview.jpg"
+    let bdy = document.getElementById("parent")
+    bdy.appendChild(imgTag)
+
+</script>
+
+</html>
