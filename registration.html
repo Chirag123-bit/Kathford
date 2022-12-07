@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registration Page</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100;200;300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100;200;300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="element-wrapper">
     <div class="register-wrapper">
       <div class="top">
         <h2>Register Now</h2>
-        <form>
+        <form action=none>
           <div class="input-wrapper">
-            <input type="text" placeholder="Enter Your Name" />
+            <input type="text" placeholder="Enter Your Name" id="name" />
           </div>
-          <div class="input-wrapper">
-            <input type="email" placeholder="Enter Your Email" />
+          <div class=" input-wrapper">
+            <input type="email" placeholder="Enter Your Email" id="email" />
           </div>
 
           <div class="input-wrapper">
-            <input type="password" placeholder="Enter Your Password" />
+            <input type="text" placeholder="Enter Your Address" id="address" />
+          </div>
+
+          <div class="input-wrapper">
+            <div style="display:flex; margin-right: 1rem; " class="mr-2">
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">Male</label>
+            </div>
+            <div style="display:flex " class="mr-2">
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female">Female</label>
+            </div>
+
           </div>
 
           <div class="input-wrapper">
@@ -40,7 +50,7 @@
           </div>
 
           <div class="input-wrapper reg">
-            <button>Register Now</button>
+            <button id="reg">Register Now</button>
             <p>Already have an account? <span>Sign in</span></p>
           </div>
         </form>
@@ -57,5 +67,71 @@
         </div>
       </div>
     </div>
-  </body>
+  </div>
+
+  <div class="element-wrapper">
+    <div class="register-wrapper">
+      <div class="top">
+        <h2>Registration Data</h2>
+        <table>
+          <tr class="input-wrapper">
+            <td colspan=2>
+              Name:
+            </td>
+            <td><input type="text" placeholder="Not Filled" class="border-none" disabled id="entered-name" /></td>
+          </tr>
+          <tr class="input-wrapper">
+            <td colspan=2>
+              Email:
+            </td>
+
+            <td><input type="email" placeholder="Not Filled" class="border-none" disabled id="entered-email" /></td>
+          </tr>
+
+          <tr class="input-wrapper">
+            <td colspan=2>
+              Address:
+            </td>
+            <td><input type="text" placeholder="Not Filled" class="border-none" disabled id="entered-address" /></td>
+          </tr>
+
+          <tr class="input-wrapper">
+            <td colspan=2>
+              Gender:
+            </td>
+            <td><input type="text" placeholder="Not Filled" class="border-none" disabled id="entered-gender" /></td>
+          </tr>
+
+
+        </table>
+      </div>
+
+
+    </div>
+  </div>
+
+</body>
+
+<script src="./jquery-3.6.1.min.js"></script>
+<script>
+
+  $("#reg").click(function (e) {
+    e.preventDefault()
+
+    let name = $("#name").val()
+    $("#entered-name").val(name);
+
+    let email = $("#email").val()
+    $("#entered-email").val(email);
+
+    let address = $("#address").val()
+    $("#entered-address").val(address);
+
+    let gender = $('input[name="gender"]:checked').val();
+    $("#entered-gender").val(gender);
+  })
+
+
+</script>
+
 </html>

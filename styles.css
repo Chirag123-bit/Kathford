@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+.element-wrapper {
   background-image: linear-gradient(
     to right top,
     #051937,
@@ -134,6 +134,18 @@ i:hover {
   transform: scale(1.2);
   cursor: pointer;
   transition: 200ms all ease-in-out;
+}
+
+.input-p {
+  font-size: 20px;
+  margin-right: 1rem;
+}
+
+.border-none {
+  border: none !important;
+}
+input:disabled {
+  background-color: transparent !important;
 }
 
 @media (max-width: 1220px) {
