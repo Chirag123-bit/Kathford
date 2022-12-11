@@ -86,4 +86,52 @@ Rename Operator $rename
 	db.users.updateMany({name:"Roshan1"},{$rename:{age:"ageNumber"}})    
 
 Delete Row remove
+	db.users.deleteOne({name:"Chirag"})
 
+
+Combining Conditions (and, or)
+	
+	db.users.find($and:[{name:"Chirag"},{age:33}])
+
+
+Comparision Operators (gte, lte, ne)
+	db.users.find({age:{$gte:25}})
+
+
+Array Search for a specific value
+	db.users.find({skill:"Django"})	
+
+Array Search for all field (all)
+	db.applicants.find({skills:{$all:["Python","Django"]}})
+
+
+
+
+
+
+
+
+db.users.insertMany(
+	[
+	
+	{name:"Chirag", skills:[{lang:"Python"},{lang:"Java"}]},
+	{name:"Ram", skills:[{lang:"JavaScript"},{lang:"Java"}]},
+	{name:"Abc", skills:[{lang:"C++"},{lang:"Django"}]},
+	{name:"Shyam", skills:[{lang:"Flask"},{lang:"Dotnet"}]}
+
+	]
+)
+
+
+
+
+db.applicants.insertMany([
+	{name:"Chirag",age:50,address:"Kathmandu", skills:["Python","Django", "HTML"]},
+	{name:"Dikshita",age:40,address:"Pokhara", skills:["CSS","Django", "HTML"]},
+	{name:"Sajan",age:30,address:"Bhaktapur", skills:["JS","Django", "HTML"]},
+	{name:"Avishek",age:20,address:"Lalitpur", skills:["Java","Dotnet", "CSS"]},
+	{name:"Prasiddha",age:25,address:"Kathmandu", skills:["Spring Boot","Dotnet", "JS"]},
+])
+
+
+db.applicants.insertOne({name:"Deepak",age:50,address:"Kathmandu", skills:["Python","Django", "CSS"]},)
